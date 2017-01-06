@@ -23,6 +23,7 @@ var server = http.createServer(function (req, res) {
       res.write(process.env.COUNTRY + ':' + process.env.LANGUAGE);
       res.write('</div>');
       res.write('</body>');
+      res.write('</html>');
       res.end('\n');
    });
 
