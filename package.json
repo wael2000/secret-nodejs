@@ -19,10 +19,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/jorgemoralespou/ose-app-promotion-configmap.git"
+    "url": "https://github.com/wael2000/secret-nodejs.git"
   },
   "keywords": [
     "Echo"
   ],
-  "author": "Jorge Morales <jorgemoralespou@gmail.com>"
+  "author": "weldoami@redhat.com"
 }
