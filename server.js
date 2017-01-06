@@ -16,7 +16,7 @@ var server = http.createServer(function (req, res) {
       res.write('<body>');
       res.write('<h1> Get username:password from Secret </h1>');
       res.write('<div>');
-      res.write('username: ' + process.env.PASSWORD);
+      res.write('username: ' + process.env.USERNAME);
       res.write('</div>');
       res.write('<div>');
       res.write('password: ' + process.env.PASSWORD);
