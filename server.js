@@ -16,7 +16,10 @@ var server = http.createServer(function (req, res) {
       res.write('<body>');
       res.write('<h1> Get username:password from Secret </h1>');
       res.write('<div>');
-      res.write(process.env.USERNAME + ':' + process.env.PASSWORD);
+      res.write('username: ' + process.env.PASSWORD);
+      res.write('</div>');
+      res.write('<div>');
+      res.write('password: ' + process.env.PASSWORD);
       res.write('</div>');
       res.write('<h1> Get country:language from ConfigMap</h1>');
       res.write('<div>');
