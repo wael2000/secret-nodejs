@@ -21,10 +21,13 @@ var server = http.createServer(function (req, res) {
       res.write('<div>');
       res.write('password: ' + process.env.PASSWORD);
       res.write('</div>');
-      res.write('<h1> Get country:language from ConfigMap</h1>');
+      res.write('<h2> Get Country:Language directly from environment variables</h2>');
       res.write('<div>');
-      res.write(process.env.COUNTRY + ':' + process.env.LANGUAGE);
+      res.write('Country: ' + process.env.COUNTRY);
       res.write('</div>');
+      res.write('<div>');
+      res.write('Language: ' + process.env.LANGUAGE);
+      res.write('</div>');      
       res.write('</body>');
       res.write('</html>');
       res.end('\n');
