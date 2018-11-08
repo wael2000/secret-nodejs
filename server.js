@@ -8,15 +8,22 @@ var PropertiesReader = require('properties-reader');
 
 var server = http.createServer(function (req, res) {
 
-   req.on('data', function (data) {});
-   req.on('end', function () {
-      console.log("Invoked");
-      
+   req.on('data', function (data) {
       var wstream = fs.createWriteStream('/data/myOutput.txt');
+      wstream.on('finish', function () {
+        console.log('file has been written');
+      });
       for(var x=0;x++;x<1001){
          wstream.write('123456789\n');
       }
       wstream.end();
+   
+   });
+   
+   req.on('end', function () {
+      console.log("Invoked");
+      
+     
       
       //var properties = PropertiesReader('/etc/node-app/node-app.config');
       res.writeHead(200, {'Content-Type': 'text/html'});
