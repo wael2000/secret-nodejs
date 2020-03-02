@@ -42,7 +42,10 @@ var server = http.createServer(function (req, res) {
       res.write('</div>');
       res.write('<div>');
       res.write('Language: ' + process.env.LANGUAGE);
-      res.write('</div>');      
+      res.write('</div>');  
+      res.write('<div>');
+      res.write('app.country.name: ' + process.env['app.country.name']);
+      res.write('</div>');  
       res.write('</body>');
       res.write('</html>');
       res.end('\n');
